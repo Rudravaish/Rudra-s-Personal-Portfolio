@@ -57,7 +57,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <GraduationCap className="h-5 w-5 text-primary" />
-                  <span className="text-gray-700">Education: Purdue - Computer Engineering</span>
+                  <span className="text-gray-700">Education: Purdue University - Computer Engineering</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Heart className="h-5 w-5 text-primary" />
