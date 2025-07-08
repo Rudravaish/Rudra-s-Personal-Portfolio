@@ -8,7 +8,7 @@ export default function Experience() {
     {
       title: "Software Developer Intern",
       company: "Narb Technology",
-      period: "2024 - Present",
+      period: "2025 - Present",
       status: "Current",
       description: "Working on innovative software solutions and contributing to cutting-edge projects in a dynamic tech environment.",
       skills: ["Python", "JavaScript", "React", "Node.js"],
@@ -22,7 +22,7 @@ export default function Experience() {
     {
       title: "Unreal Engine Developer Intern",
       company: "Escape",
-      period: "2024 - Present",
+      period: "2025 - Present",
       status: "Current",
       description: "Developing immersive experiences and interactive applications using Unreal Engine, focusing on cutting-edge gaming and visualization technologies.",
       skills: ["Unreal Engine", "C++", "Blueprints", "3D Graphics"],
