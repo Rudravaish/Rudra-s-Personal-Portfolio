@@ -55,7 +55,19 @@ export default function Contact() {
       return;
     }
 
-    contactMutation.mutate(formData);
+    // Create email with pre-filled content
+    const subject = `Portfolio Contact: ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:rudra.vaishnav17@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.open(mailtoLink, '_blank');
+    
+    toast({
+      title: "Opening email client",
+      description: "Your default email client will open with the message pre-filled.",
+    });
+    
+    setFormData({ name: "", email: "", message: "" });
   };
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
@@ -127,6 +139,18 @@ export default function Contact() {
           <Card className="section-gradient">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Message</h3>
+              <div className="space-y-4 mb-6">
+                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-900 mb-2">Email Me Directly</h4>
+                  <p className="text-blue-800 mb-2">For the fastest response, email me at:</p>
+                  <a 
+                    href="mailto:rudra.vaishnav17@gmail.com"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    rudra.vaishnav17@gmail.com
+                  </a>
+                </div>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Label htmlFor="name">Name</Label>
@@ -164,16 +188,8 @@ export default function Contact() {
                 <Button
                   type="submit"
                   className="w-full"
-                  disabled={contactMutation.isPending}
                 >
-                  {contactMutation.isPending ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    "Send Message"
-                  )}
+                  Send Email
                 </Button>
               </form>
               <p className="text-xs text-gray-500 mt-4">
