@@ -106,6 +106,7 @@ This is a full-stack web application built with React, Express.js, and TypeScrip
 
 ```
 Changelog:
+- July 08, 2025. Updated personal information: location to California, United States and education to Purdue - Computer Engineering
 - July 07, 2025. Initial setup
 ```
 

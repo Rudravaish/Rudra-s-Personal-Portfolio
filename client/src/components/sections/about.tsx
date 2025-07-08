@@ -49,7 +49,7 @@ export default function About() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-gray-700">Location: India</span>
+                  <span className="text-gray-700">Location: California, United States</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Briefcase className="h-5 w-5 text-primary" />
@@ -57,7 +57,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <GraduationCap className="h-5 w-5 text-primary" />
-                  <span className="text-gray-700">Education: Computer Science</span>
+                  <span className="text-gray-700">Education: Purdue - Computer Engineering</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Heart className="h-5 w-5 text-primary" />
